@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrigallen GAA Location</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <header>
+        <h1>Carrigallen GAA Club</h1>
+        <p>Find us on the map!</p>
+    </header>
+     <nav>
+        <ul>
+            <li><a href="carrigallen.html">Home</a></li>
+            <li><a href="map.html">Where to Locate Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Location</h2>
+            <p>We are located at the heart of Carrigallen. Visit us for exciting Gaelic football matches and community events!</p>
+        </section>
+
+       
+        <section id="map-container">
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+
+        <section>
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> Carrigallen GAA Grounds, Carrigallen, County Leitrim, Ireland</p>
+            <p><strong>Email:</strong> info@carrigallengaa.ie</p>
+            <p><strong>Phone:</strong> +353 71 1234567</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carrigallen GAA Club. All rights reserved.</p>
+        <ul>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </footer>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXpv3sOyQdOWf2jSivHEM36JY-N1vdbus&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const carrigallenLocation = { lat: 53.976897, lng: -7.644698 };
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: carrigallenLocation,
+            });
+
+            const marker = new google.maps.Marker({
+                position: carrigallenLocation,
+                map: map,
+                title: "Carrigallen GAA Club",
+            });
+        }
+    </script>
+</body>
+</html>
+
